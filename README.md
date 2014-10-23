@@ -1,1 +1,1 @@
-# Basic FizzBuzz to practive JS and JQuery
+# Basic FizzBuzz to practice JS and JQuery

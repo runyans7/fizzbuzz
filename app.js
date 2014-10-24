@@ -5,16 +5,18 @@ $(document).ready(function(){
   // Convert string to integer
   var endValue = +endValue;
 
-  // Checks if input is a whole intger
+  //Check if value is whole intger
   if (isNaN(endValue)){
     alert("You must enter an integer!");
     location.reload();
   } else if (endValue % 1 != 0){
     alert("You must enter a whole number!");
     location.reload();
+  } else {
+    console.log("Value is a whole integer");
   };
 
-  $('#start').on('click', function(){
+  var fizzBuzzFunc = function() {
     for (var i = 1; i <= endValue; i++) {
       if (i % 15 == 0) {
         $('<p>FizzBuzz</p>').appendTo('body');
@@ -24,8 +26,9 @@ $(document).ready(function(){
         $('<p>Buzz</p>').appendTo('body');
       } else {
         $('<p>' + i + '<p>').appendTo('body');
-      }
+      };
     };
-  })
-
+  };
+  
+  fizzBuzzFunc();
 });
